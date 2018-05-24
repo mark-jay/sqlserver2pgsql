@@ -8,7 +8,7 @@ It is written in Perl and has received a fair amount of testing.
 It does three things:
 
   * convert a SQL Server schema to a PostgreSQL schema
-  * produce a Pentaho Data Integrator (Kettle) job to migrate 
+  * produce a Pentaho Data Integrator (Kettle) job to migrate
     all the data from SQL Server to PostgreSQL (optional)
   * produce an incremental version of this job to migrate what has changed in the database from the previous run. This is created when the migration job is also created.
 
@@ -108,8 +108,8 @@ so the scale is often not important.
 If you want to also import data:
 
 ```
-./sqlserver2pgsql.pl -b before.sql -a after.sql -u unsure.sql -k kettledir \ 
-    -sd source -sh 192.168.0.2 -sp 1433 -su dalibo -sw mysqlpass \
+./sqlserver2pgsql.pl -b before.sql -a after.sql -u unsure.sql -k kettledir \
+    -sd source -sh 192.168.0.2 -sp 1433 -su dalibo -sw sqlserverpass \
     -pd dest -ph localhost -pp 5432 -pu dalibo -pw mypgpass -f sql_server_schema.sql
 ```
 
